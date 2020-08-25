@@ -16,6 +16,7 @@ case class CallService(callRepository: CallRepository) {
             .callsForCustomer(customer)
             .filter(_.numberCalled != promotionNumber)
             .map(_.cost)
+            //.sum
             .reduceOption(_ + _)
             .getOrElse(BigDecimal(0.00))
         )

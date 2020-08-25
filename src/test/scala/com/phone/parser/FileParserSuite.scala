@@ -15,9 +15,7 @@ class FileParserSuite extends AnyFunSuite {
   test("ParseCalls correctly converts a list of records to a list of calls") {
     val parsedFile = FileParser.parseFile(testFilePath)
     val calls = FileParser.parseCalls(parsedFile)
-    println("dl" + calls.head.durationInSeconds)
     assert(calls.head.durationInSeconds.equals(75))
-    println("dl" + calls(1).durationInSeconds)
     assert(calls(1).durationInSeconds.equals(518))
   }
 }

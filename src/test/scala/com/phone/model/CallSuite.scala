@@ -34,7 +34,7 @@ class CallSuite extends AnyFunSuite {
     assert(call.cost.equals(10.8))
   }
 
-  test("Call in first time range has lower rateapplied") {
+  test("Call in first time range has lower rate applied") {
     val call = Call(callStringLine)
     assert(call.cost.equals(3.0))
   }
